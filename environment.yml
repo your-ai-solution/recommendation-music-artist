@@ -1,0 +1,15 @@
+
+name: recommendation-music-artist
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - pytorch
+  - scikit-learn
+  - tqdm
+  - pip
+  - pip:
+      - torchmetrics
