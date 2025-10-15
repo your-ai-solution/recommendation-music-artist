@@ -14,7 +14,7 @@ This project focuses on recommending music artists to users based on their liste
   - [Docker Setup (Optional)](#docker-setup-optional)
 - [Usage](#usage)
   - [Run Main Script](#run-main-script)
-  - [Run Each Source Script (Optional)](#run-each-source-script-optional)
+  - [Run Each Source Module (Optional)](#run-each-source-module-optional)
     - [Data Preparation](#data-preparation)
     - [Training](#training)
     - [Inference](#inference)
@@ -65,24 +65,24 @@ Refer to the `results/recommendations.txt` for the recommendations for ten rando
 
 ```
 recommendation-music-artist/
-├── configs/                      # Pre-trained model configurations
-├── data/                         # Dataset
-│   ├── preprocessed/             # Preprocessed data
-│   └── raw/                      # Raw downloaded data
-├── Dockerfile                    # Docker setup
-├── environment.yml               # Conda environment setup
-├── example.png                   # Example of User 959
-├── LICENSE                       # Project license
-├── main.py                       # Main pipeline script
-├── ncf.png                       # Illustration of NCF
-├── README.md                     # Project README
-├── requirements.txt              # Python dependencies
-├── results/                      # Outputs from inference
-│   └── recommendations.txt       # Example recommendations with friend lists
-└── src/                          # Source code
-    ├── data.py                   # Data preparation script
-    ├── infer.py                  # Inference script
-    └── train.py                  # Training script
+├── configs/                    # Pre-trained model configurations
+├── data/                       # Dataset
+│   ├── preprocessed/           # Preprocessed data
+│   └── raw/                    # Raw downloaded data
+├── Dockerfile                  # Docker setup
+├── environment.yml             # Conda environment setup
+├── example.png                 # Example of User 959
+├── LICENSE                     # Project license
+├── main.py                     # Main pipeline script
+├── ncf.png                     # Illustration of NCF
+├── README.md                   # Project README
+├── requirements.txt            # Python dependencies
+├── results/                    # Outputs from inference
+│   └── recommendations.txt     # Example recommendations with friend lists
+└── src/                        # Source code
+    ├── data.py                 # Data preparation script
+    ├── infer.py                # Inference script
+    └── train.py                # Training script
 ```
 
 ## Installation
@@ -129,19 +129,19 @@ recommendation-music-artist/
    python main.py
    ```
 
-### Run Each Source Script (Optional)
+### Run Each Source Module (Optional)
 
 1. Data preparation: Preprocess the raw dataset.
    ```bash
-   python src/data.py
+   python -m src.data
    ```
 
 2. Training: Train a transformer model.
    ```bash
-   python src/train.py
+   python -m src.train
    ```
 
 3. Inference: Run inference on the test dataset.
    ```bash
-   python src/infer.py
+   python -m src.infer
    ```
